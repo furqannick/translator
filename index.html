@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------------- Icon Scout --------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!----------------- CSS --------------->
+    <link rel="stylesheet" href="style.css">
+    <title>Translator | Furqan </title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+
+            <ul class="controls">
+
+                <li class="row from">
+                    <select></select>
+                    <div class="icons">
+                        <i id="form" class="uil uil-volume"></i>
+                        <i id="form" class="uil uil-copy"></i>
+                    </div>
+                </li>
+
+                <li class="exchange"><i class="uil uil-exchange-alt"></i></li>
+
+                <li class="row to">
+                    <select></select>
+                    <div class="icons">
+                        <i id="form"class="uil uil-volume"></i>
+                        <i id="form" class="uil uil-copy" ></i>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="text-input">
+                <textarea spellcheck="false" class="from-text" placeholder="Enter text" ></textarea>
+
+                <div class="space"></div>
+
+                <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation" ></textarea>
+
+            </div>
+
+        </div>
+        <button class="btn">Translate Text</button>
+
+    </div>
+
+
+    <!--------------- Js -------------->
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add your desired styles for the main footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0); /* Transparent background */
+      padding: 5px;
+      text-align: right;
+      width: 99vw; /* Occupy the full viewport width */
+      transition: height 0s; /* Smooth transition for height change */
+    }
+
+    /* Adjust styles for the text */
+    footer p {
+      margin: 0; /* Remove default margin */
+      font-size: 12px; /* Adjust the font size as needed */
+      opacity: 1; /* Initial opacity */
+      transition: opacity 1s; /* Smooth transition for opacity change */
+    }
+
+    /* Add styles for the small footer */
+    .small-footer {
+      max-width: 100vw; /* Ensure the small footer doesn't exceed viewport width */
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s; /* Smooth transition for height change */
+    }
+
+    /* Styles for the image */
+    .small-footer img {
+      width: 35px; /* Adjust the width as needed */
+      height: auto;
+      border-radius: 10%;
+      margin-top: 2px; /* Adjust the margin as needed */
+      opacity: 1; /* Initial opacity */
+      transition: opacity 1s; /* Smooth transition for opacity change */
+    }
+
+    /* Styles for the description and phone */
+    .small-footer p {
+      margin: 0px 0;
+      font-size: 12px; /* Adjust the font size as needed */
+      opacity: 1; /* Initial opacity */
+      transition: opacity 1s; /* Smooth transition for opacity change */
+    }
+
+    /* Hover effect for the small footer */
+    footer .third-line:hover + .small-footer,
+    .small-footer:hover {
+      height: 100px; /* Adjust the height as needed */
+    }
+
+    /* Adjust the styles for Furqan Asghar and phone number */
+    .small-footer img,
+    .small-footer p {
+      display: inline-block; /* Display elements in a line */
+      vertical-align: middle; /* Align elements vertically in the middle */
+    }
+
+    /* Move Furqan Asghar to the top and phone number to the bottom */
+    .small-footer img {
+      margin-bottom: -10px; /* Adjust the margin as needed */
+    }
+
+    /* Add styles for the link */
+    footer a {
+      color: #000000; /* Set default link color to black */
+      text-decoration: none; /* Remove the underline */
+      transition: color 0.3s; /* Smooth transition for color change */
+    }
+
+    /* Add hover effect for the word "Furqan" */
+    footer a:hover {
+      color: #ffffff; /* Change the hover color to white */
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none; /* Remove the underline */
+      position: relative;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var smallFooter = document.querySelector('.small-footer');
+
+      var elementsToHide = document.querySelectorAll('.small-footer p, .small-footer img');
+
+      document.querySelector('.small-footer img').addEventListener('mouseenter', function() {
+        elementsToHide.forEach(function(element, index) {
+          setTimeout(function() {
+            element.style.opacity = 0;
+          }, index * 1000); // Adjust the delay (in milliseconds) between each line
+        });
+      });
+
+      smallFooter.addEventListener('mouseleave', function() {
+        elementsToHide.forEach(function(element) {
+          element.style.opacity = 1;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Your content goes here -->
+
+  <footer>
+    <!-- First line -->
+    <p>© Client Name.</p>
+    <!-- Second line -->
+    <p>All rights reserved.</p>
+    <!-- Third line with hover effect -->
+    <p class="third-line">Web Design by: <a href="http://www.sflksflk.com" target="_blank"><b>Furqan</b></a></p>
+
+    <!-- Small footer with image and description -->
+    <div class="small-footer">
+      <img src="image/profile.png" style="float: right; margin-left: 10px; margin-bottom: 0px;">
+      <div style="float: right;">
+        <p>FURQAN ASHGAR</p><br>
+        <p><a href="https://wa.link/wexxbh" target="_blank"><b>+92 324 60-777-88</b></a></p>
+      </div>
+      <div style="clear: both;"></div>
+      <p><b>Social Media Manager, Marketer, & Web Designer</b></p><br>
+      <p><b>"</b>Passionate about crafting compelling online experiences,</p><br>
+      <p><b>Furqan</b> brings creativity and expertise <b>to every digital project."</b></p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
